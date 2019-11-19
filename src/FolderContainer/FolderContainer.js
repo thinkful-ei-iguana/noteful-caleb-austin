@@ -1,10 +1,14 @@
 import React from 'react'
+import FolderList from './FolderList'
+import GoBackButton from './GoBackButton'
 
 const FolderContainer = (props) => {
     return (
         <section>
-            <FolderList/>
-            <Folder/>
+            <FolderList
+              folders={props.folders}
+            />
+            <GoBackButton />
         </section>
     )
 }

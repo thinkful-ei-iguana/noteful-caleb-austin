@@ -2,7 +2,7 @@ import React from 'react'
 
 const Folder = (props) => {
     return (
-        <li></li>
+        <li key={props.folderID}>{props.folderName}</li>
     )
 }
 

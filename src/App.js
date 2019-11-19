@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import store from './store';
 import Header from './Header';
+import FolderContainer from './FolderContainer/FolderContainer'
 
 
 
@@ -22,7 +23,6 @@ class App extends React.Component {
         <FolderContainer
           folders={this.state.folders}
         />
-        
       </main>
     </>
     );
