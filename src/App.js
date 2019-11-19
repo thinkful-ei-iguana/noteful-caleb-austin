@@ -3,6 +3,7 @@ import './App.css';
 import store from './store';
 import Header from './Header';
 import FolderContainer from './FolderContainer/FolderContainer'
+import NoteContainer from './NoteContainer/NoteContainer'
 
 
 
@@ -19,9 +20,14 @@ class App extends React.Component {
       <header>
         <Header/>
       </header>
-      <main>
+      <sidebar>
         <FolderContainer
           folders={this.state.folders}
+        />
+      </sidebar>
+      <main>
+        <NoteContainer
+          notes={this.state.notes}
         />
       </main>
     </>
