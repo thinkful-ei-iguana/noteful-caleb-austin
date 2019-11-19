@@ -8,6 +8,8 @@ const FolderList = (props) => {
       <Folder 
         folderName = {currentFolder.name}
         folderID = {currentFolder.id}
+        activeFolder={props.activeFolder}
+        setActiveFolder={props.setActiveFolder}
       />
     )
   })

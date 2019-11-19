@@ -7,6 +7,8 @@ const FolderContainer = (props) => {
         <section>
             <FolderList
               folders={props.folders}
+              activeFolder={props.activeFolder}
+              setActiveFolder={props.setActiveFolder}
             />
             <GoBackButton />
         </section>

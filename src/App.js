@@ -11,7 +11,12 @@ class App extends React.Component {
 
   state = {
     folders: store.folders,
-    notes: store.notes
+    notes: store.notes,
+    activeFolder: null
+  }
+
+  setActiveFolder = (selectedFolderID) => {
+    this.setState({ activeFolder: selectedFolderID });
   }
 
   render () {
@@ -23,11 +28,14 @@ class App extends React.Component {
       <sidebar>
         <FolderContainer
           folders={this.state.folders}
+          activeFolder={this.state.activeFolder}
+          setActiveFolder={this.setActiveFolder}
         />
       </sidebar>
       <main>
         <NoteContainer
           notes={this.state.notes}
+          activeFolder={this.state.activeFolder}
         />
       </main>
     </>
