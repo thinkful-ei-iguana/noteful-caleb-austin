@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import store from './store';
 import Header from './Header';
@@ -26,11 +27,20 @@ class App extends React.Component {
         <Header/>
       </header>
       <sidebar>
-        <FolderContainer
-          folders={this.state.folders}
-          activeFolder={this.state.activeFolder}
-          setActiveFolder={this.setActiveFolder}
+        <Route 
+          path={["/folder/:folderID","/"]}
+          render={ (routerprops) => {
+            return (
+            <FolderContainer
+              folders={this.state.folders}
+              activeFolder={this.state.activeFolder}
+              setActiveFolder={this.setActiveFolder}
+              {...routerprops}
+            />
+            )
+          }}
         />
+       
       </sidebar>
       <main>
         <NoteContainer

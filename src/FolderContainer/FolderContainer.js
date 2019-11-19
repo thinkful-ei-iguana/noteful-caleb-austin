@@ -3,6 +3,7 @@ import FolderList from './FolderList'
 import GoBackButton from './GoBackButton'
 
 const FolderContainer = (props) => {
+    console.log(props);
     return (
         <section>
             <FolderList
